@@ -1,3 +1,5 @@
+import { FaLinkedin, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -25,8 +27,8 @@ const Footer = () => {
                   href="#home"
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all duration-200"></span>
                   Home
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </a>
               </li>
               <li>
@@ -34,8 +36,8 @@ const Footer = () => {
                   href="#projects"
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all duration-200"></span>
                   Projects
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </a>
               </li>
               <li>
@@ -43,8 +45,8 @@ const Footer = () => {
                   href="#skills"
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all duration-200"></span>
                   Skills
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </a>
               </li>
               <li>
@@ -52,8 +54,8 @@ const Footer = () => {
                   href="#about"
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all duration-200"></span>
                   About
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </a>
               </li>
               <li>
@@ -61,8 +63,8 @@ const Footer = () => {
                   href="#contact"
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all duration-200"></span>
                   Contact
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </a>
               </li>
             </ul>
@@ -79,6 +81,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <FaLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   LinkedIn
                 </a>
               </li>
@@ -89,6 +92,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <FaGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   GitHub
                 </a>
               </li>

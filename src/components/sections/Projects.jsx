@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const projectsData = [
   {
@@ -109,7 +110,7 @@ const Projects = () => {
                 >
                   View in Detail
                   <span className="text-primary-500 group-hover:translate-x-1 transition-transform">
-                    →
+                    <FaArrowRightLong />
                   </span>
                 </a>
               </div>
