@@ -28,7 +28,7 @@ const Footer = () => {
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
                   Home
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
                 </a>
               </li>
               <li>
@@ -37,7 +37,7 @@ const Footer = () => {
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
                   Projects
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
                 </a>
               </li>
               <li>
@@ -46,7 +46,7 @@ const Footer = () => {
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
                   Skills
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
                 </a>
               </li>
               <li>
@@ -55,7 +55,7 @@ const Footer = () => {
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
                   About
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
                 </a>
               </li>
               <li>
@@ -64,7 +64,7 @@ const Footer = () => {
                   className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
                 >
                   Contact
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
                 </a>
               </li>
             </ul>
