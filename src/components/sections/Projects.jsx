@@ -7,7 +7,7 @@ const projectsData = [
     category: "UI/UX",
     description: "Product page design for healthcare analytics platform",
     tags: ["UI Design", "Healthcare", "SaaS"],
-    image: "https://via.placeholder.com/600x400",
+    image: "https://placehold.co/600x400",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const projectsData = [
     category: "UI/UX",
     description: "Mobile app for network performance analytics",
     tags: ["Mobile UI", "Analytics", "UX"],
-    image: "https://via.placeholder.com/600x400",
+    image: "https://placehold.co/600x400",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const projectsData = [
     category: "UI/UX",
     description: "Complete SaaS platform design system",
     tags: ["Web Design", "SaaS", "Design System"],
-    image: "https://via.placeholder.com/600x400",
+    image: "https://placehold.co/600x400",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const projectsData = [
     category: "Logo & Brand Identity",
     description: "Comprehensive brand identity and logo design projects",
     tags: ["Branding", "Logo Design", "Identity"],
-    image: "https://via.placeholder.com/600x400",
+    image: "https://placehold.co/600x400",
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const projectsData = [
     category: "Creative Design",
     description: "Marketing assets across multiple channels",
     tags: ["Marketing", "Graphics", "Campaign"],
-    image: "https://via.placeholder.com/600x400",
+    image: "https://placehold.co/600x400",
   },
 ];
 

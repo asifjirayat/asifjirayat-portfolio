@@ -31,7 +31,7 @@ const Navigation = () => {
             <span className="relative z-10">{item.name}</span>
             {isHovered && (
               <motion.div
-                className="absolute inset-0 bg-gray-100 rounded-lg -z-0"
+                className="absolute inset-0 bg-gray-100 rounded-lg z-0"
                 layoutId="navbar-hover"
                 transition={{
                   type: "spring",
