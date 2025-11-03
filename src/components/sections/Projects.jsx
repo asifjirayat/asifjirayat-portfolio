@@ -45,7 +45,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,10 +53,10 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
             My Projects
           </h2>
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl">
+          <p className="text-lg text-neutral-600 mb-12">
             I've worked on a variety of projects, from simple websites to
             complex web applications. Here are a few of my favorites.
           </p>
@@ -73,7 +73,7 @@ const Projects = () => {
               whileHover={{ y: -10 }}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
             >
-              <div className="relative h-64 overflow-hidden bg-gray-200">
+              <div className="relative h-64 overflow-hidden bg-linear-to-br from-primary-100 to-accent-100">
                 <motion.img
                   src={project.image}
                   alt={project.title}
@@ -81,7 +81,7 @@ const Projects = () => {
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.4 }}
                 />
-                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-gray-900">
+                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-primary-700 shadow-md">
                   {project.category}
                 </div>
               </div>
@@ -90,13 +90,13 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-neutral-600 mb-4">{project.description}</p>
 
                 <div className="flex gap-2 flex-wrap mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium border border-primary-200"
                     >
                       {tag}
                     </span>
@@ -105,9 +105,12 @@ const Projects = () => {
 
                 <a
                   href="#"
-                  className="text-gray-900 font-medium hover:underline"
+                  className="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center gap-2 group"
                 >
                   View in Detail
+                  <span className="text-primary-500 group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
                 </a>
               </div>
             </motion.div>

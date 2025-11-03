@@ -24,14 +24,14 @@ const Navigation = () => {
           <a
             key={item.path}
             href={item.path}
-            className="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-gray-900 relative transition-colors duration-200"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-neutral-700 hover:text-primary-600 relative transition-colors duration-200"
             onMouseEnter={() => setHoveredPath(item.path)}
             onMouseLeave={() => setHoveredPath("")}
           >
             <span className="relative z-10">{item.name}</span>
             {isHovered && (
               <motion.div
-                className="absolute inset-0 bg-gray-100 rounded-lg z-0"
+                className="absolute inset-0 bg-primary-50 rounded-lg z-0"
                 layoutId="navbar-hover"
                 transition={{
                   type: "spring",

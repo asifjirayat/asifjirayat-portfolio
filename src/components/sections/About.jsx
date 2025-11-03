@@ -11,23 +11,32 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8">
             About
           </h2>
-          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-lg text-neutral-700 leading-relaxed">
             <p>
-              I'm a UI/UX Designer with <strong>7+ years of experience</strong>{" "}
+              I'm a UI/UX Designer with{" "}
+              <strong className="text-primary-700 font-semibold">
+                7+ years of experience
+              </strong>{" "}
               building intuitive, scalable digital products across B2B, SaaS,
               and analytics.
             </p>
             <p>
-              I specialize in <strong>AI-enhanced workflows</strong> (Framer,
-              Midjourney, Lovable), responsive UI systems, and collaborative
-              frontend handoff using HTML, CSS, and JavaScript.
+              I specialize in{" "}
+              <strong className="text-primary-700 font-semibold">
+                AI-enhanced workflows
+              </strong>{" "}
+              (Framer, Midjourney, Lovable), responsive UI systems, and
+              collaborative frontend handoff using HTML, CSS, and JavaScript.
             </p>
 
             <p>
-              My toolkit includes <strong>Figma's latest features</strong>{" "}
+              My toolkit includes{" "}
+              <strong className="text-primary-700 font-semibold">
+                Figma's latest features
+              </strong>{" "}
               (tokens, variables, AI), Adobe Creative Suite, and design systems
               that scale.
             </p>
