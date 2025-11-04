@@ -1,9 +1,19 @@
 import { motion } from "framer-motion";
-import { li } from "framer-motion/client";
+import {
+  FaUserCheck,
+  FaPalette,
+  FaBrain,
+  FaPencilRuler,
+  FaCode,
+  FaCircle,
+  FaCheckCircle,
+} from "react-icons/fa";
+import { FaCircleArrowDown } from "react-icons/fa6";
 
 const skillsData = [
   {
     category: "UX Skills",
+    icon: <FaUserCheck className="text-3xl text-primary-600" />,
     skills: [
       "User Research",
       "Usability Testing",
@@ -19,6 +29,7 @@ const skillsData = [
   },
   {
     category: "UI & Systems",
+    icon: <FaPalette className="text-3xl text-primary-600" />,
     skills: [
       "Figma (Components, Tokens, Variables, AI Features)",
       "Design Tokens",
@@ -31,6 +42,7 @@ const skillsData = [
   },
   {
     category: "AI Tools & Prompting",
+    icon: <FaBrain className="text-3xl text-primary-600" />,
     skills: [
       "Lovable",
       "Framer AI",
@@ -44,6 +56,7 @@ const skillsData = [
   },
   {
     category: "Design & Creative Tools",
+    icon: <FaPencilRuler className="text-3xl text-primary-600" />,
     skills: [
       "Adobe Creative Suite (Illustrator, Photoshop, XD, After Effects)",
       "FigJam",
@@ -54,6 +67,7 @@ const skillsData = [
   },
   {
     category: "Front-end & Dev Handoff",
+    icon: <FaCode className="text-3xl text-primary-600" />,
     skills: [
       "HTML5",
       "CSS3",
@@ -93,7 +107,7 @@ const Skills = () => {
               className="bg-linear-to-br from-primary-50 to-accent-50 rounded-xl p-6 border border-primary-100 hover:shadow-lg hover:border-primary-200 transition-all"
             >
               <h3 className="text-xl font-bold text-neutral-900 mb-4 flex items-center gap-3">
-                <span className="text-3xl">💡</span>
+                <span className="text-3xl">{section.icon}</span>
                 <span className="bg-linear-to-r from-primary-700 to-accent-700 bg-clip-text text-transparent">
                   {section.category}
                 </span>
@@ -103,9 +117,9 @@ const Skills = () => {
                 {section.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="text-neutral-700 flex items-end gap-2 text-sm"
+                    className="text-neutral-700 flex items-center gap-2 text-md"
                   >
-                    <span className="text-primary-500 mt-1 font-bold">•</span>
+                    <FaCheckCircle className="text-green-500 text-sm" />
                     <span>{skill}</span>
                   </li>
                 ))}

@@ -32,23 +32,27 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-neutral-700 mb-8 max-w-3xl leading-relaxed"
+            className="text-lg md:text-xl text-neutral-700 mb-2 max-w-3xl leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Blending clean designm frontend code, and AI-driven workflows.
-            <span className="font-semibold text-primary-700">
-              {" "}
-              Google-Certified | 7+ Years | B2B • SaaS • Analytics
-            </span>
+            Blending clean design frontend code, and AI-driven workflows.
+          </motion.p>
+          <motion.p
+            className="text-lg md:text-xl font-semibold text-primary-700 mb-8 max-w-3xl leading-relaxed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            Google-Certified | 7+ Years | B2B • SaaS • Analytics
           </motion.p>
 
           <motion.div
             className="flex gap-4 flex-wrap"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
           >
             <a
               href="#projects"
