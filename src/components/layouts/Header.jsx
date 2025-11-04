@@ -2,17 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import Navigation from "./Navigation.jsx";
-
-const navItems = [
-  { name: "Home", path: "#home" },
-  { name: "About", path: "#about" },
-  { name: "Projects", path: "#projects" },
-  { name: "Skills", path: "#skills" },
-  { name: "Experience", path: "#experience" },
-  { name: "Certifications", path: "#certifications" },
-  { name: "Education", path: "#education" },
-  { name: "Contact", path: "#contact" },
-];
+import { navItems } from "../../util/navItems.js";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

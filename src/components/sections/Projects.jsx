@@ -1,48 +1,6 @@
+import { projectsData } from "../../util/projectsData.js";
 import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
-
-const projectsData = [
-  {
-    id: 1,
-    title: "HealthWorksAI Product Page",
-    category: "UI/UX",
-    description: "Product page design for healthcare analytics platform",
-    tags: ["UI Design", "Healthcare", "SaaS"],
-    image: "https://placehold.co/600x400",
-  },
-  {
-    id: 2,
-    title: "Network Score App",
-    category: "UI/UX",
-    description: "Mobile app for network performance analytics",
-    tags: ["Mobile UI", "Analytics", "UX"],
-    image: "https://placehold.co/600x400",
-  },
-  {
-    id: 3,
-    title: "SaaS Platform",
-    category: "UI/UX",
-    description: "Complete SaaS platform design system",
-    tags: ["Web Design", "SaaS", "Design System"],
-    image: "https://placehold.co/600x400",
-  },
-  {
-    id: 4,
-    title: "Brand Identity Design",
-    category: "Logo & Brand Identity",
-    description: "Comprehensive brand identity and logo design projects",
-    tags: ["Branding", "Logo Design", "Identity"],
-    image: "https://placehold.co/600x400",
-  },
-  {
-    id: 5,
-    title: "Multi Channel Marketing Creatives",
-    category: "Creative Design",
-    description: "Marketing assets across multiple channels",
-    tags: ["Marketing", "Graphics", "Campaign"],
-    image: "https://placehold.co/600x400",
-  },
-];
 
 const Projects = () => {
   return (

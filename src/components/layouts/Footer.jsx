@@ -1,3 +1,4 @@
+import { navItems } from "../../util/navItems.js";
 import { FaLinkedin, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Footer = () => {
@@ -22,51 +23,17 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#home"
-                  className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Home
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Projects
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Skills
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  About
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Contact
-                  <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
-                </a>
-              </li>
+              {navItems.map((item) => (
+                <li key={item.path}>
+                  <a
+                    href={item.path}
+                    className="text-neutral-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-2 group"
+                  >
+                    {item.name}
+                    <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
