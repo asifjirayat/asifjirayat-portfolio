@@ -1,34 +1,35 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/layouts/Header.jsx";
 import Footer from "./components/layouts/Footer.jsx";
-import Hero from "./components/sections/Hero.jsx";
-import About from "./components/sections/About.jsx";
-import Projects from "./components/sections/Projects.jsx";
-import Skills from "./components/sections/Skills.jsx";
-import Experience from "./components/sections/Experience.jsx";
-import Education from "./components/sections/Education.jsx";
-import Certifications from "./components/sections/Certifications.jsx";
-import Contact from "./components/sections/Contact.jsx";
+import RootLayout from "./components/layouts/RootLayout.jsx";
+import Homepage from "./pages/Homepage.jsx";
+import ProjectDetailPage from "./pages/ProjectDetailPage.jsx";
+import NotFound from "./pages/NotFound.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        index: true,
+        element: <Homepage />,
+      },
+      {
+        path: "/project/:id",
+        element: <ProjectDetailPage />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
-
-      {/* Main content */}
-      <main className="pt-20">
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Experience />
-        <Education />
-        <Certifications />
-        <Contact />
-      </main>
-
-      <Footer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
