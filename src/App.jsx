@@ -6,6 +6,8 @@ import Projects from "./components/sections/Projects.jsx";
 import Skills from "./components/sections/Skills.jsx";
 import Experience from "./components/sections/Experience.jsx";
 import Education from "./components/sections/Education.jsx";
+import Certifications from "./components/sections/Certifications.jsx";
+import Contact from "./components/sections/Contact.jsx";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Skills />
         <Experience />
         <Education />
+        <Certifications />
+        <Contact />
       </main>
 
       <Footer />
