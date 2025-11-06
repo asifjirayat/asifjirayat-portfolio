@@ -70,3 +70,31 @@ export const skillsData = [
     ],
   },
 ];
+
+export const philosophyMap = {
+  "UX Skills": {
+    title: "Understanding People",
+    description:
+      "Design isn't about making things pretty. It's about understanding why users click where they click.",
+  },
+  "UI & Systems": {
+    title: "Building Consistency",
+    description:
+      "Design systems aren't limitations. They're the foundation for scalable, cohesive experiences.",
+  },
+  "AI Tools & Prompting": {
+    title: "Amplifying Creativity",
+    description:
+      "AI doesn't replace designers. It amplifies what we're capable of—when we know what to ask for.",
+  },
+  "Design & Creative Tools": {
+    title: "The Craft",
+    description:
+      "Tools are just tools. But mastering them means spending less time fighting software and more time creating.",
+  },
+  "Front-end & Dev Handoff": {
+    title: "Bridging Worlds",
+    description:
+      "The best designs are the ones that ship. Code is how I turn pixels into reality.",
+  },
+};
