@@ -1,10 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./components/layouts/Header.jsx";
-import Footer from "./components/layouts/Footer.jsx";
 import RootLayout from "./components/layouts/RootLayout.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import ProjectDetailPage from "./pages/ProjectDetailPage.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import ComponentTestPage from "./pages/ComponentTestPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/project/:id",
         element: <ProjectDetailPage />,
+      },
+      {
+        path: "/test-components",
+        element: <ComponentTestPage />,
       },
     ],
   },
