@@ -4,6 +4,13 @@ import CategoryBadge from "../components/common/CategoryBadge.jsx";
 import Modal from "../components/common/Modal";
 import ImageGallery from "../components/common/ImageGallery";
 import ExpandableSection from "../components/common/ExpandableSection.jsx";
+import CaseStudyHero from "../features/caseStudies/components/CaseStudyHero.jsx";
+import CaseStudyQuickStats from "../features/caseStudies/components/CaseStudyQuickStats.jsx";
+import CaseStudyChallenge from "../features/caseStudies/components/CaseStudyChallenge.jsx";
+import CaseStudySolution from "../features/caseStudies/components/CaseStudySolution.jsx";
+import CaseStudyImpact from "../features/caseStudies/components/CaseStudyImpact.jsx";
+import CaseStudyImageGrid from "../features/caseStudies/components/CaseStudyImageGrid.jsx";
+import CaseStudyDeepDive from "../features/caseStudies/components/CaseStudyDeepDive.jsx";
 import { FaLightbulb, FaImage, FaBox } from "react-icons/fa";
 
 const ComponentTestPage = () => {
@@ -12,7 +19,7 @@ const ComponentTestPage = () => {
   // Sample images for gallery
   const sampleImages = [
     {
-      src: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500&h=300&fit=crop",
+      src: "https://images.unsplash.com/laptop-computer-on-glass-top-table-hpjSkU2UYSU?w=500&h=300&fit=crop",
       caption: "Dashboard Overview",
       description: "Main analytics dashboard showing key metrics",
     },
@@ -52,10 +59,169 @@ const ComponentTestPage = () => {
             Common Components Test
           </h1>
           <p className="text-lg text-neutral-600">
-            Testing all 4 reusable components for case studies
+            Testing all reusable components for case studies
           </p>
         </div>
       </div>
+
+      {/* case study impact */}
+      <motion.section className="space-y-8 mt-20">
+        <h2 className="text-3xl font-bold">CaseStudyImpact Component</h2>
+        <CaseStudyImpact
+          summary="The redesign resulted in dramatic user engagement growth and client satisfaction."
+          outcomes={[
+            {
+              main: "+45% user engagement",
+              sub: "Users spent more time exploring data",
+            },
+            {
+              main: "+32% workflow efficiency",
+              sub: "Reduction in manual analysis",
+            },
+            { main: "4.8/5 satisfaction", sub: "Rated by post-launch survey" },
+          ]}
+          kpiImage="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=600&h=400&fit=crop"
+          quote="The design overhaul turned static dashboards into a strategic advantage."
+          quoteAuthor="Chief Product Officer, HealthWorksAI"
+        />
+      </motion.section>
+
+      {/* case study image grid */}
+      <motion.section className="space-y-8 mt-20">
+        <h2 className="text-3xl font-bold">CaseStudyImageGrid Component</h2>
+        <CaseStudyImageGrid
+          title="Final Design Screens"
+          images={[
+            {
+              src: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=600",
+              caption: "Dashboard Overview",
+            },
+            {
+              src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
+              caption: "Market Analysis",
+            },
+            {
+              src: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600",
+              caption: "Plan Comparison",
+            },
+            {
+              src: "https://images.unsplash.com/photo-1561123527-da47bd85e563?w=600",
+              caption: "Enrollment Trends",
+            },
+          ]}
+          columns={2}
+          caption={true}
+          description="A selection of high-impact screens from the final build."
+        />
+      </motion.section>
+
+      {/* case study deep dive */}
+      <motion.section className="space-y-8 mt-20">
+        <h2 className="text-3xl font-bold">CaseStudyDeepDive Component</h2>
+        <CaseStudyDeepDive
+          sections={[
+            {
+              title: "User Research & Personas",
+              type: "persona",
+              content: (
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500"
+                  alt="Persona Overview"
+                  className="rounded-xl"
+                />
+              ),
+            },
+            {
+              title: "Process: Flows & Wireframes",
+              type: "flow",
+              content: (
+                <img
+                  src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500"
+                  alt="User Flow"
+                  className="rounded-xl"
+                />
+              ),
+            },
+            {
+              title: "Test Scenarios",
+              type: "test",
+              content: (
+                <img
+                  src="https://images.unsplash.com/photo-1561123527-da47bd85e563?w=500"
+                  alt="Test Scenarios"
+                  className="rounded-xl"
+                />
+              ),
+              defaultOpen: false,
+            },
+            {
+              title: "Competitive Audit",
+              type: "research",
+              content: (
+                <img
+                  src="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500"
+                  alt="Competitive Audit"
+                  className="rounded-xl"
+                />
+              ),
+              defaultOpen: false,
+            },
+          ]}
+        />
+      </motion.section>
+
+      {/* Case study solution */}
+      <motion.section className="space-y-8 mt-20">
+        <h2 className="text-3xl font-bold">CaseStudySolution Component Test</h2>
+        <CaseStudySolution
+          title="The Solution"
+          description="We redesigned the platform with a user-centered approach, focusing on intuitive interfaces and customizable dashboards."
+          approaches={[
+            {
+              title: "User-Centered Design",
+              description:
+                "Conducted extensive user research to understand pain points",
+            },
+            {
+              title: "React Migration",
+              description:
+                "Migrated from Tableau to modern React-based frontend",
+            },
+            {
+              title: "Advanced Analytics",
+              description: "Integrated AI and machine learning for predictions",
+            },
+          ]}
+          highlights={[
+            {
+              title: "Drag-and-Drop UI",
+              description:
+                "Users customize dashboards with drag-and-drop components",
+            },
+            {
+              title: "Real-Time Data",
+              description: "Dynamic refresh ensures latest information",
+            },
+            {
+              title: "Predictive Tools",
+              description: "Built-in scenario planning and forecasting",
+            },
+          ]}
+        />
+      </motion.section>
+
+      {/* Case Study Hero */}
+      <motion.section className="space-y-8 mt-20">
+        <h2 className="text-3xl font-bold">CaseStudyHero Component Test</h2>
+        <CaseStudyHero
+          title="HealthWorksAI Analytics Dashboard Redesign"
+          subtitle="User-centric design empowers informed decision-making"
+          role="Lead Designer"
+          period="Sep 2021 - Present"
+          heroImage="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=800&h=500&fit=crop"
+          category="Case Study"
+        />
+      </motion.section>
 
       {/* Content */}
       <div className="max-w-6xl mx-auto px-6 py-16 space-y-20">
@@ -101,6 +267,76 @@ const ComponentTestPage = () => {
               </div>
             </div>
           </div>
+        </motion.section>
+
+        {/* Case study stats */}
+        <motion.section className="space-y-8 mt-20">
+          <h2 className="text-3xl font-bold">
+            CaseStudyQuickStats Component Test
+          </h2>
+          <CaseStudyQuickStats
+            stats={[
+              {
+                icon: "FaUsers",
+                value: "25+",
+                label: "Active Clients",
+                change: "Established",
+                description: "Healthcare payors using the platform",
+              },
+              {
+                icon: "FaArrowUp",
+                value: "+45%",
+                label: "User Engagement",
+                change: "Increased",
+              },
+              {
+                icon: "FaClock",
+                value: "-32%",
+                label: "Task Time",
+                change: "Reduced",
+              },
+              {
+                icon: "FaSmile",
+                value: "4.8/5",
+                label: "Satisfaction",
+                change: "Outstanding",
+              },
+            ]}
+          />
+        </motion.section>
+
+        {/* Case study challenge */}
+        <motion.section className="space-y-8 mt-20">
+          <h2 className="text-3xl font-bold">
+            CaseStudyChallenge Component Test
+          </h2>
+          <CaseStudyChallenge
+            title="The Challenge"
+            description="Healthcare payers were struggling with slow, inflexible analytics tools."
+            challenges={[
+              {
+                title: "Manual Data Analysis",
+                description:
+                  "Existing dashboards required manual effort and weren't flexible",
+              },
+              {
+                title: "Limited Customization",
+                description:
+                  "Users couldn't adapt dashboards to their specific needs",
+              },
+              {
+                title: "Performance Issues",
+                description:
+                  "Slow processing with large datasets made real-time analysis difficult",
+              },
+              {
+                title: "Poor UX",
+                description:
+                  "Complex navigation and outdated interface discouraged adoption",
+              },
+            ]}
+            image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop"
+          />
         </motion.section>
 
         {/* 2. Modal Test */}
