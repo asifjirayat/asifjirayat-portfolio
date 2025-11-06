@@ -1,105 +1,142 @@
-import { experienceData } from "../../util/experienceData.js";
 import { motion } from "framer-motion";
-import { FaBriefcase, FaCheckCircle } from "react-icons/fa";
+import { experienceData, narrativeMap } from "../../util/experienceData.js";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-neutral-50">
+    <section id="experience" className="py-20 bg-white">
       <div className="container mx-auto px-6">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="max-w-5xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
-            Work Experience
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+            Experience
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            My professional journey in design and development
+          <div className="w-20 h-1 bg-linear-to-r from-primary-600 to-accent-600 rounded-full mb-2"></div>
+          <p className="text-lg text-neutral-600 max-w-3xl mt-6">
+            7+ years of designing and building digital products. Here's the
+            journey so far.
           </p>
         </motion.div>
 
+        {/* Timeline */}
         <div className="max-w-5xl mx-auto">
-          {/* Timeline */}
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-primary-400 to-accent-400 -translate-x-1/2"></div>
+          {experienceData.map((job, index) => {
+            const narrative = narrativeMap[job.title];
 
-            {/* Timeline items */}
-            {experienceData.map((item, index) => (
+            return (
               <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                key={job.id}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
-                className="relative mb-12"
+                className="relative mt-6"
               >
-                <div
-                  className={`flex flex-col md:flex-row items-center gap-8 ${
-                    index % 2 === 0 ? "md:flex-row-reverse" : ""
-                  }`}
-                >
-                  {/* Timeline icon */}
-                  <div
-                    className={`w-16 h-16 rounded-full bg-linear-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg z-10 shrink-0 ${
-                      item.current ? "ring-4 ring-primary-200" : ""
-                    }`}
-                  >
-                    <FaBriefcase className="text-white text-2xl" />
-                  </div>
-
-                  {/* Content card */}
-                  <motion.div
-                    whileHover={{ y: -5 }}
-                    className="flex-1 w-full bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all border border-neutral-200"
-                  >
-                    {/* Period badge */}
-                    <div className="flex items-center gap-2 mb-3 flex-wrap">
-                      <span className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
-                        {item.period}
-                      </span>
-                      {item.current && (
-                        <span className="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm font-bold">
-                          Current
-                        </span>
+                {/* Timeline Dot */}
+                <div className="flex gap-6">
+                  <div className="relative flex flex-col items-center">
+                    <div className="w-12 h-12 rounded-full bg-white border-4 border-primary-600 flex items-center justify-center z-10">
+                      {job.current ? (
+                        <div className="w-3 h-3 rounded-full bg-primary-600 animate-pulse"></div>
+                      ) : (
+                        <FaCheckCircle className="text-lg text-primary-600" />
                       )}
                     </div>
+                  </div>
 
-                    {/* Job title */}
-                    <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-                      {item.title}
-                    </h3>
+                  {/* Job Content */}
+                  <div className="flex-1 pb-8">
+                    {/* Header */}
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+                      <div>
+                        <h3 className="text-2xl font-bold text-neutral-900">
+                          {job.title}
+                        </h3>
+                        <p className="text-lg text-primary-600 font-medium">
+                          {job.company}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm font-semibold text-neutral-600">
+                          {job.period}
+                        </p>
+                        <p className="text-xs text-neutral-500">
+                          {job.location}
+                        </p>
+                      </div>
+                    </div>
 
-                    {/* Company */}
-                    <p className="text-lg font-semibold text-primary-600 mb-1">
-                      {item.company}
-                    </p>
+                    {/* Current Badge */}
+                    {job.current && (
+                      <motion.div
+                        animate={{ y: [0, -3, 0] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="inline-block mb-4"
+                      >
+                        <span className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-bold">
+                          Currently Here
+                        </span>
+                      </motion.div>
+                    )}
 
-                    {/* Location */}
-                    <p className="text-sm text-neutral-500 mb-4">
-                      {item.location}
-                    </p>
+                    {/* Narrative Section */}
+                    <div className="bg-linear-to-br from-primary-50 to-accent-50 rounded-xl p-4 mb-6 border border-primary-100">
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-xs font-bold text-primary-600 uppercase mb-1">
+                            The Challenge
+                          </p>
+                          <p className="text-sm text-neutral-700">
+                            {narrative.challenge}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs font-bold text-primary-600 uppercase mb-1">
+                            What I Did
+                          </p>
+                          <p className="text-sm text-neutral-700">
+                            {narrative.what}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs font-bold text-primary-600 uppercase mb-1">
+                            What I Learned
+                          </p>
+                          <p className="text-sm text-neutral-700">
+                            {narrative.learned}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
 
                     {/* Responsibilities */}
-                    <ul className="space-y-2">
-                      {item.responsibilities.map((responsibility, index) => (
-                        <li
-                          key={index}
-                          className="text-neutral-700 flex items-start gap-2 text-sm"
-                        >
-                          <FaCheckCircle className="text-primary-500 mt-1 text-sm" />{" "}
-                          <span>{responsibility}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
+                    <div>
+                      <p className="text-sm font-bold text-neutral-900 mb-3">
+                        Key Responsibilities
+                      </p>
+                      <ul className="space-y-2">
+                        {job.responsibilities.map((responsibility, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-3 text-sm text-neutral-700"
+                          >
+                            <FaCheckCircle className="text-green-600 mt-1 shrink-0 text-xs" />
+                            <span>{responsibility}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

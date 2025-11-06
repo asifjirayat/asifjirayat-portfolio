@@ -34,3 +34,19 @@ export const experienceData = [
     current: false,
   },
 ];
+
+export const narrativeMap = {
+  "Senior Web & Visual Designer": {
+    challenge:
+      "How do you make healthcare analytics understandable and engaging for teams making critical decisions?",
+    what: "Designed and built interfaces that transform complex data into actionable insights.",
+    learned:
+      "Purpose-driven design has real impact when you understand your users deeply.",
+  },
+  "Frontend Developer & Visual Designer": {
+    challenge:
+      "How do you balance design quality with development speed in a fast-paced creative studio?",
+    what: "Built responsive websites and created reusable component systems for multiple clients.",
+    learned: "Constraints breed creativity, and collaboration is everything.",
+  },
+};
