@@ -20,7 +20,7 @@ const Contact = () => {
             Let's Work Together
           </h2>
 
-          {/* Decription */}
+          {/* Description */}
           <p className="text-lg md:text-xl text-neutral-700 mb-4 leading-relaxed">
             Want to chat? Just shoot me a DM with a direct question and I'll
             respond whenever I can.
@@ -38,7 +38,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="flex flex-col items-center gap-3 p-8 bg-white rounded-2xl border-2 border-primary-200 hover:border-primary-400 hover:shadow-xl transition-all group min-w-[160px]"
+              className="flex flex-col items-center gap-3 p-8 bg-white rounded-2xl border-2 border-primary-200 hover:border-primary-400 hover:shadow-xl transition-all group min-w-40"
             >
               <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center group-hover:bg-primary-600 transition-colors">
                 <FaLinkedin className="text-4xl text-primary-600 group-hover:text-white transition-colors" />
@@ -59,10 +59,10 @@ const Contact = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="flex flex-col items-center gap-3 p-8 bg-white rounded-2xl border-2 border-primary-200 hover:border-primary-400 hover:shadow-xl transition-all group min-w-[160px]"
+              className="flex flex-col items-center gap-3 p-8 bg-white rounded-2xl border-2 border-primary-200 hover:border-primary-400 hover:shadow-xl transition-all group min-w-40"
             >
               <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center group-hover:bg-primary-600 transition-colors">
-                <FaLinkedin className="text-4xl text-primary-600 group-hover:text-white transition-colors" />
+                <FaGithub className="text-4xl text-primary-600 group-hover:text-white transition-colors" />
               </div>
               <div className="text-center">
                 <span className="text-lg font-bold text-neutral-900 block mb-1">

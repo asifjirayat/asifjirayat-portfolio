@@ -6,17 +6,19 @@ const Education = () => {
   return (
     <section id="education" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-6">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="max-w-5xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
             Education
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-linear-to-r from-primary-600 to-accent-600 rounded-full mb-2"></div>
+          <p className="text-lg text-neutral-600 mt-6 max-w-3xl">
             Academic background and learning journey
           </p>
         </motion.div>
